@@ -254,6 +254,9 @@ namespace WoWPacketViewer
         public void HandleGossipMenu(Parser packet)
         {
             packet.ReadInt64("Guid: ");
+            //packet.ReadInt32("Gossip Menu ID: ");
+            //New Type of Packed Guid 
+            //packet.ReadInt32("Guid: ");
             packet.ReadCString("Gossip Text: ");
             packet.ReadInt32("Unk: ");
             packet.ReadInt32("Unk: ");
@@ -269,6 +272,16 @@ namespace WoWPacketViewer
                 packet.ReadByte("Unknown: " + i);
                 packet.ReadCString("Quest Title: " + i);
             }
+        }
+        [Parser(OpCodes.SMSG_SHOWTAXINODES)]
+        public void HandleShowTaxiNodes(Parser packet)
+        {
+            packet.ReadInt32("Always 1: ");
+            packet.ReadInt64("Guid: ");
+            packet.ReadInt32("Curloc: ");
+
+            //for (int i = 0; i < 82; i++)
+                //packet.ReadByte("Unknown " + i + " : ");
         }
     }
 }

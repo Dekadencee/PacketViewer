@@ -541,6 +541,22 @@ namespace WoWPacketViewer
                 packet.ReadInt32("EmoteId");
                 packet.ReadInt32("EmoteDelay");
             }
-        } 
+        }
+        /* Structure of this packets isn't fully correct */
+        //Packet 52001
+        [Parser(OpCodes.SMSG_START_QUEST)]
+        public void HandleServerQuestStart(Parser packet)
+        {
+            packet.ReadInt32("Unknown: ");
+            packet.ReadInt32("Unknown: ");
+            packet.ReadInt32("Quest Giver ID: ");
+            packet.ReadInt32("Quest ID: ");
+        }
+        [Parser(OpCodes.CMSG_START_QUEST)]
+        public void HandleClientQuestStart(Parser packet)
+        {
+            packet.ReadInt32("Unknown: ");
+            packet.ReadInt32("Quest ID: ");
+        }
     }
 }

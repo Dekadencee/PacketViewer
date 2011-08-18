@@ -1264,7 +1264,8 @@ namespace WowTools.Core
         SMSG_WHOIS,
         SMSG_WORLD_STATE_UI_TIMER_UPDATE,
         SMSG_ZONE_UNDER_ATTACK,
-        SMSG_GOSSIP_QUEST_MENU
+        SMSG_GOSSIP_QUEST_MENU,
+        SMSG_START_QUEST
 
 
         /* Uncomment this and comment out values above if you don't want to use the OpcodeDB feature
