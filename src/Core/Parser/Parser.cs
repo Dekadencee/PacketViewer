@@ -42,7 +42,7 @@ namespace WowTools.Core
         {
             if (Reader.BaseStream.Position != Reader.BaseStream.Length)
             {
-                string msg = String.Format("ERROR: Packet size is wrong, should be {1} instead of {2}", Packet.Code, Reader.BaseStream.Position, Reader.BaseStream.Length);
+                string msg = String.Format("ERROR: Packet size is wrong, should be {1} instead of {2}", Packet.Code, Reader.BaseStream.Length, Reader.BaseStream.Position);
                 //MessageBox.Show(msg);
                 WriteLine(msg);
             }
