@@ -27,9 +27,9 @@ namespace WowTools.Core
         public static void Load(uint build, String connectionString)
         {
             Enabled = (uint) OpCodes.SMSG_UPDATE_OBJECT > 0xFFFF;   // if DB is used all the enum values have to be > 0xFFFF
-            if(build == 0 || build == 14480)
+            if(build == 0 || build == 15050)
             {
-                build = 14333;  // default to latest
+                build = 15005;  // default to latest
             }
             ConnectionString = connectionString;
             if (!Enabled || build == BuildLoaded)
