@@ -12,7 +12,7 @@ namespace WoWPacketViewer
 
         public IEnumerable<Packet> ReadPackets(string file)
         {
-            Build = 14505;  // unknown. not stored
+            Build = 15453;  // unknown. not stored
             var packets = new List<Packet>();
             using (TextReader tr = new StreamReader(file))
             {
